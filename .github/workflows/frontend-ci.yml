@@ -2,29 +2,29 @@ name: Habiitz CI
 
 on:
   push:
-    branch: ["main"]
-  pull_requests:
+    branches: ["main"]
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      -name: checkout repository
-      uses: actions/checkout@v4
+      - name: checkout repository
+        uses: actions/checkout@v4
 
-    step:
-      -name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 22
-        cache: "npm"
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+           node-version: 22
+           cache: "npm"
 
-      name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-      name: Build Project
-      run: npm run build
+      - name: Build Project
+        run: npm run build
  
         
 # If project uses .env variables (like API keys):
