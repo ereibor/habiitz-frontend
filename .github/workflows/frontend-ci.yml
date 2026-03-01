@@ -2,7 +2,7 @@ name: Habiitz CI
 
 on:
   push:
-    branches: ["main"]
+    branches: ["development"]
   pull_request:
 
 jobs:
