@@ -1,12 +1,16 @@
 "use client";
 import { useRouter } from "next/navigation";
+import React, { ReactNode } from "react";
 
 interface ButtonProps {
   label: string;
-  color?: string; // Tailwind classes
+  color?: string;
   type?: "button" | "submit" | "reset";
   onClick?: () => void;
-  href?: string; // for routing
+  href?: string;
+
+  leftIcon?: ReactNode;
+  rightIcon?: ReactNode;
 }
 
 const Button = ({
@@ -15,6 +19,8 @@ const Button = ({
   type = "button",
   onClick,
   href,
+  leftIcon,
+  rightIcon,
 }: ButtonProps) => {
   const router = useRouter();
 
@@ -32,9 +38,13 @@ const Button = ({
     <button
       type={type}
       onClick={handleClick}
-      className={`px-5 py-2 rounded-lg text-white text-sm font-medium transition-colors shadow-sm cursor-pointer ${color}`}
+      className={`flex items-center justify-center gap-2 px-5 py-2 rounded-lg text-white text-sm font-medium transition-colors shadow-sm cursor-pointer ${color}`}
     >
-      {label}
+      {leftIcon && <span className="flex items-center">{leftIcon}</span>}
+
+      <span>{label}</span>
+
+      {rightIcon && <span className="flex items-center">{rightIcon}</span>}
     </button>
   );
 };

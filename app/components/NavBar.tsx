@@ -41,7 +41,11 @@ const NavBar = () => {
             Preview
           </Link>
 
-          <Button label="Sign Up" type="submit" />
+          <Button
+            label="Sign Up"
+            type="submit"
+            leftIcon={<CalendarCheckIcon />}
+          />
         </div>
       </div>
     </nav>
