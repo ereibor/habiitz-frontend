@@ -2,6 +2,12 @@ import Link from "next/link";
 import Button from "./Button";
 import Logo from "./Logo";
 
+const navItems = [
+  { name: "Feature", href: "#features" },
+  { name: "Preview", href: "#preview" },
+  { name: "Sign In", href: "#signin" },
+];
+
 const NavBar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
@@ -9,31 +15,15 @@ const NavBar = () => {
         <Logo />
 
         <div className="hidden md:flex items-center gap-8">
-          <Link
-            href="#features"
-            className="text-sm text-gray-500 hover:text-gray-900"
-          >
-            Features
-          </Link>
-          <Link
-            href="#preview"
-            className="text-sm text-gray-500 hover:text-gray-900"
-          >
-            Preview
-          </Link>
-          <Link
-            href="#features"
-            className="text-sm text-gray-500 hover:text-gray-900"
-          >
-            Sign In
-          </Link>
-          <Link
-            href="#preview"
-            className="text-sm text-gray-500 hover:text-gray-900"
-          >
-            Preview
-          </Link>
-
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-sm text-gray-500 hover:text-gray-900"
+            >
+              {item.name}
+            </Link>
+          ))}
           <Button label="Sign Up" type="submit" />
         </div>
       </div>
