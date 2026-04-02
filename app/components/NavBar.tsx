@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Button from "./Button";
 import Logo from "./Logo";
 import { routes } from "@/routes";
 
@@ -25,7 +24,14 @@ const NavBar = () => {
               {item.name}
             </Link>
           ))}
-          <Button label="Sign Up" type="submit" />
+
+          {/* 👇 Styled like your button */}
+          <Link
+            href={routes.signup}
+            className="flex items-center justify-center gap-2 px-5 py-2 rounded-lg text-white text-sm font-medium transition-colors shadow-sm bg-blue-500 hover:bg-blue-600"
+          >
+            Sign Up
+          </Link>
         </div>
       </div>
     </nav>
