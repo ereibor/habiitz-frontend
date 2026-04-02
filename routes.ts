@@ -3,4 +3,5 @@ export const routes = {
   features: "#features",
   preview: "#preview",
   signin: "#signin",
+  signup: "#signup",
 } as const;
