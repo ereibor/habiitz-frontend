@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Button from "./Button";
 import Logo from "./Logo";
+import { routes } from "@/routes";
 
 const navItems = [
-  { name: "Feature", href: "#features" },
-  { name: "Preview", href: "#preview" },
-  { name: "Sign In", href: "#signin" },
+  { name: "Feature", href: routes.features },
+  { name: "Preview", href: routes.preview },
+  { name: "Sign In", href: routes.signin },
 ];
 
 const NavBar = () => {
