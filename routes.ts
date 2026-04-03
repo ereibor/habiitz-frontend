@@ -1,7 +1,7 @@
 export const routes = {
-  home: "/",
-  features: "#features",
-  preview: "#preview",
-  signin: "#signin",
-  signup: "#signup",
+  HOME: "/",
+  FEATURES: "#features",
+  PREVIEW: "#preview",
+  SIGNIN: "#signin",
+  SIGNUP: "#signup",
 } as const;
