@@ -10,11 +10,8 @@ const navItems = [
 
 const NavBar = () => {
   return (
-    <header>
-      <nav
-        aria-label="Main navigation"
-        className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100"
-      >
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+      <nav aria-label="Main navigation">
         <div className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
           <Link href="/" aria-label="Homepage">
             <Logo />
