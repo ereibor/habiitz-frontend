@@ -23,6 +23,7 @@ const heroBenefits = [
     title: "Works on all devices",
   },
 ];
+
 // Decorative sparkle SVG component
 function Sparkle({ className }: { className?: string }) {
   return (
@@ -34,6 +35,7 @@ function Sparkle({ className }: { className?: string }) {
     </svg>
   );
 }
+
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-linear-to-b from-gray-50/80 to white">
@@ -141,11 +143,11 @@ const Hero = () => {
               </div>
 
               {/* Sparkle decoration */}
-              <SparklesIcon className="absolute top-[8%] right-[30%] w-2 h-2 text-cyan-300" />
-              <SparklesIcon className="absolute top-[60%] right-[8%] w-2 h-2 text-amber-300" />
-              <SparklesIcon className="absolute bottom-[12%] left-[35%] w-4 h-4 text-blue-300" />
-              <SparklesIcon className="absolute top-[25%] left-[45%] w-3 h-3 text-violet-300" />
-              <SparklesIcon className="absolute bottom-[35%] right-[30%] w-4 h-4 text-green-300" />
+              <Sparkle className="absolute top-[8%] right-[30%] w-5 h-5 text-cyan-300" />
+              <Sparkle className="absolute top-[60%] right-[8%] w-4 h-4 text-amber-300" />
+              <Sparkle className="absolute bottom-[12%] left-[35%] w-6 h-6 text-blue-300" />
+              <Sparkle className="absolute top-[25%] left-[45%] w-3 h-3 text-violet-300" />
+              <Sparkle className="absolute bottom-[35%] right-[30%] w-4 h-4 text-green-300" />
             </div>
           </div>
         </div>
