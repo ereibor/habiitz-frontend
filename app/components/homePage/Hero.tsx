@@ -95,7 +95,7 @@ const Hero = () => {
               </div>
 
               {/* Floating habit cards */}
-              <div className="absolute top-[12%] left-[8%] bg-white rounded-xl shadow-lg shadow-gray-200/60 p-3 px-4 flex items-center gap-2.5">
+              <div className="absolute top-[12%] left-[8%] bg-white rounded-xl shadow-lg shadow-gray-200/60 p-3 px-4 flex items-center gap-2.5 animate-float-slow">
                 <div className="w-8 h-8 rounded-lg bg-orange-400 flex items-center justify-center">
                   <CheckCircleIcon className="w-4 h-4 text-white" />
                 </div>
@@ -105,7 +105,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="absolute top-[35%] right-[5%] bg-white rounded-xl shadow-lg shadow-gray-200/60 p-3 px-4 flex items-center gap-2.5">
+              <div className="absolute top-[35%] right-[5%] bg-white rounded-xl shadow-lg shadow-gray-200/60 p-3 px-4 flex items-center gap-2.5 animate-float-medium">
                 <div className="w-8 h-8 rounded-lg bg-violet-500 flex items-center justify-center">
                   <ZapIcon className="w-4 h-4 text-white" />
                 </div>
@@ -115,7 +115,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="absolute bottom-[25%] left-[5%] bg-white rounded-xl shadow-lg shadow-gray-200/60 p-3 px-4 flex items-center gap-2.5 ">
+              <div className="absolute bottom-[25%] left-[5%] bg-white rounded-xl shadow-lg shadow-gray-200/60 p-3 px-4 flex items-center gap-2.5 animate-float-fast ">
                 <div className="w-8 h-8 rounded-lg bg-cyan-400 flex items-center justify-center">
                   <SparklesIcon className="w-4 h-4 text-white" />
                 </div>
