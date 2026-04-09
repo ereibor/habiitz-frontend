@@ -23,7 +23,17 @@ const heroBenefits = [
     title: "Works on all devices",
   },
 ];
-
+// Decorative sparkle SVG component
+function Sparkle({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className}>
+      <path
+        d="M12 2L13.5 9.5L21 12L13.5 14.5L12 22L10.5 14.5L3 12L10.5 9.5L12 2Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-linear-to-b from-gray-50/80 to white">
