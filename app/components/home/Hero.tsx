@@ -38,7 +38,7 @@ function Sparkle({ className }: { className?: string }) {
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-linear-to-b from-gray-50/80 to white">
+    <section className="relative overflow-hidden bg-linear-to-b from-gray-50/80 to-white">
       <div className="max-w-6xl mx-auto px-5 pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* left copy      */}

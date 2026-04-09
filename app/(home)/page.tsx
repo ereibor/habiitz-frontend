@@ -1,9 +1,11 @@
-import Hero from "../components/homePage/Hero";
+import DashboardPreviewSection from "../components/home/DashboardPreviewSection";
+import Hero from "../components/home/Hero";
 
 export default function Home() {
   return (
     <main className="min-h-screen w-full bg-white">
       <Hero />
+      <DashboardPreviewSection />
     </main>
   );
 }
