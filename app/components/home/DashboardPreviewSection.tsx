@@ -13,6 +13,31 @@ const DashboardPreviewSection = () => {
             effortless and even enjoyable
           </p>
         </div>
+
+        {/* Browser frame mockup */}
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-2xl shadow-2xl shadow-gray-300/40 border border-gray-200 overflow-hidden bg-white">
+            {/* Browser chrome */}
+
+            <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-200">
+              <div className="flex gap-1.5">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-amber-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+              </div>
+
+              <div className="flex-1 mx-4">
+                <div className="bg-white rounded-md px-3 py-1 text-xs text-gray-400 max-w-xs mx-auto text-center border border-gray-200">
+                  Habiitz
+                </div>
+              </div>
+            </div>
+
+            {/* Dasboard Preview */}
+
+            <div className="bg-gray-50 p-4 md:p-6"></div>
+          </div>
+        </div>
       </div>
     </section>
   );
