@@ -1,34 +1,17 @@
-"use client";
-import React, { ReactNode } from "react";
+import { ComponentProps, ReactNode } from "react";
 
-interface ButtonProps {
-  label: string;
-  color?: string;
-  type?: "button" | "submit" | "reset";
-  onClick?: () => void;
-  leftIcon?: ReactNode;
-  rightIcon?: ReactNode;
+interface ButtonProps extends ComponentProps<"button"> {
+  children: ReactNode;
+  className?: string;
 }
 
-const Button = ({
-  label,
-  color = "bg-blue-500 hover:bg-blue-600",
-  type = "button",
-  onClick,
-  leftIcon,
-  rightIcon,
-}: ButtonProps) => {
+const Button = ({ children, className = "", ...props }: ButtonProps) => {
   return (
     <button
-      type={type}
-      onClick={onClick}
-      className={`flex items-center justify-center gap-2 px-5 py-2 rounded-lg text-white text-sm font-medium transition-colors shadow-sm cursor-pointer ${color}`}
+      {...props}
+      className={`flex items-center justify-center cursor-pointer ${className}`}
     >
-      {leftIcon && <span className="flex items-center">{leftIcon}</span>}
-
-      <span>{label}</span>
-
-      {rightIcon && <span className="flex items-center">{rightIcon}</span>}
+      {children}
     </button>
   );
 };
