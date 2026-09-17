@@ -1,5 +1,6 @@
 "use client";
 import Button from "@/app/components/Button";
+import Input from "@/app/components/Input";
 import { ArrowLeftIcon, CalendarCheckIcon, UserIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -52,22 +53,13 @@ const SignUp = () => {
             </div>
 
             <form className=" ">
-              <div>
-                <label
-                  htmlFor="signup-name"
-                  className="block text-sm font-semibold text-gray-600 mb-1.5 uppercase tracking-wide"
-                >
-                  Full Name
-                </label>
-                <div className="relative">
-                  <UserIcon className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
-                  <input
-                    type="text"
-                    placeholder="Hailey Johnson"
-                    className="w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow border-gray-200 bg-gray-50/50"
-                  />
-                </div>
-              </div>
+              <UserIcon className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
+              <Input
+                type="text"
+                placeholder="Hailey Johnson"
+                label="Full Name"
+                className="w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow border-gray-200 bg-gray-50/50"
+              />
             </form>
           </div>
         </div>
