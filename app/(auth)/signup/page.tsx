@@ -1,10 +1,20 @@
 "use client";
 import Button from "@/app/components/Button";
 import Input from "@/app/components/Input";
-import { ArrowLeftIcon, CalendarCheckIcon, UserIcon } from "lucide-react";
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  CalendarCheckIcon,
+  LockIcon,
+  MailIcon,
+  UserIcon,
+} from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const SignUp = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   return (
@@ -42,7 +52,7 @@ const SignUp = () => {
 
         {/* Form */}
         <div className="flex-1 flex items-center justify-center px-5 py-12">
-          <div className="w-full h-10 max-w-sm">
+          <div className="w-full max-w-sm">
             <div className="mb-8">
               <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight mb-1.5">
                 Create your account
@@ -52,14 +62,57 @@ const SignUp = () => {
               </p>
             </div>
 
-            <form className=" ">
-              <UserIcon className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
+            <form className="space-y-4">
               <Input
                 type="text"
                 placeholder="Hailey Johnson"
                 label="Full Name"
                 className="w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow border-gray-200 bg-gray-50/50"
+                icon={<UserIcon className="w-4 h-4 text-gray-300" />}
+                id="signup-name"
               />
+              <Input
+                type="email"
+                placeholder="you@email.com"
+                label="Email"
+                className="w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow border-gray-200 bg-gray-50/50"
+                icon={<MailIcon className="w-4 h-4 text-gray-300" />}
+                id="signup-email"
+              />
+              <Input
+                type="password"
+                placeholder="Password"
+                label="Password"
+                className="w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow border-gray-200 bg-gray-50/50"
+                icon={<LockIcon className="w-4 h-4 text-gray-300" />}
+                id="signup-password"
+              />
+              {/* Terms */}
+              <p className="text-[11px] text-gray-400 leading-relaxed">
+                By creating an account, you agree to our{" "}
+                <Link href="#" className="text-blue-500 hover:underline">
+                  Terms of Service
+                </Link>{" "}
+                and{" "}
+                <Link href="#" className="text-blue-500 hover:underline">
+                  Privacy Policy
+                </Link>
+              </p>
+
+              {/* Submit */}
+              <Button
+                type="submit"
+                className="w-full py-3 px-4 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-xl transition-colors"
+              >
+                {isLoading ? (
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                ) : (
+                  <>
+                    Create Account
+                    <ArrowRightIcon className="w-4 h-4" />
+                  </>
+                )}
+              </Button>
             </form>
           </div>
         </div>
