@@ -68,7 +68,7 @@ const SignUp = () => {
                 placeholder="Hailey Johnson"
                 label="Full Name"
                 className="w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow border-gray-200 bg-gray-50/50"
-                icon={<UserIcon className="w-4 h-4 text-gray-300" />}
+                icon={UserIcon}
                 id="signup-name"
               />
               <Input
@@ -76,7 +76,7 @@ const SignUp = () => {
                 placeholder="you@email.com"
                 label="Email"
                 className="w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow border-gray-200 bg-gray-50/50"
-                icon={<MailIcon className="w-4 h-4 text-gray-300" />}
+                icon={MailIcon}
                 id="signup-email"
               />
               <Input
@@ -84,7 +84,7 @@ const SignUp = () => {
                 placeholder="Password"
                 label="Password"
                 className="w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow border-gray-200 bg-gray-50/50"
-                icon={<LockIcon className="w-4 h-4 text-gray-300" />}
+                icon={LockIcon}
                 id="signup-password"
               />
               {/* Terms */}
