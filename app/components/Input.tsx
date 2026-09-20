@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LucideIcon, EyeIcon, EyeOffIcon } from "lucide-react";
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends ComponentProps<"input"> {
   label: string;
   icon?: LucideIcon;
   error?: string;
