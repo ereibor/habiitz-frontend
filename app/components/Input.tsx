@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ComponentProps, useState } from "react";
 import { LucideIcon, EyeIcon, EyeOffIcon } from "lucide-react";
 
 interface InputProps extends ComponentProps<"input"> {
