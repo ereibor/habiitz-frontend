@@ -82,7 +82,7 @@ const SignUp = () => {
               <Input
                 type="password"
                 placeholder="Password"
-                label="Password"
+                label="PASSWORD"
                 className="w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow border-gray-200 bg-gray-50/50"
                 icon={LockIcon}
                 id="signup-password"
