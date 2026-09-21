@@ -20,9 +20,6 @@ export default function Input({
 }: InputProps) {
   const [showPassword, setShowPassword] = useState(false);
 
-  const isPassword = type === "password";
-  const shouldShowToggle = isPassword && showPasswordToggle;
-
   return (
     <div>
       {/* Label */}
@@ -43,10 +40,10 @@ export default function Input({
         {/* Input */}
         <input
           id={id}
-          type={isPassword && showPassword ? "text" : type}
+          type={showPassword ? "text" : type}
           {...props}
           className={`w-full ${Icon ? "pl-10" : "pl-4"} ${
-            shouldShowToggle ? "pr-11" : "pr-4"
+            showPasswordToggle ? "pr-11" : "pr-4"
           } py-3 rounded-xl border text-sm text-gray-900 placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow ${
             error
               ? "border-red-300 bg-red-50/50"
@@ -55,7 +52,7 @@ export default function Input({
         />
 
         {/* Password visibility button */}
-        {shouldShowToggle && (
+        {showPasswordToggle && (
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
