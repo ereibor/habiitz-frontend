@@ -4,13 +4,10 @@ import Button from "@/app/components/Button";
 import { routes } from "@/routes";
 import { ArrowLeftIcon, CalendarCheckIcon, MailCheckIcon } from "lucide-react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const ConfirmEmail = () => {
   const router = useRouter();
-  const searchParams = useSearchParams();
-
-  const email = searchParams.get("email") || "your email address";
 
   return (
     <div className="min-h-screen w-full flex">
@@ -59,8 +56,10 @@ const ConfirmEmail = () => {
 
             <p className="text-sm text-gray-400 leading-relaxed">
               We&apos;ve sent a confirmation link to{" "}
-              <span className="font-medium text-gray-600">{email}</span>.
-              Confirm your email to finish setting up your Habiitz account.
+              <span className="font-medium text-gray-600">
+                your email address
+              </span>
+              . Confirm your email to finish setting up your Habiitz account.
             </p>
 
             <Button
