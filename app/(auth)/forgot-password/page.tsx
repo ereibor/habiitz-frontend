@@ -1,21 +1,19 @@
 "use client";
+
 import Button from "@/app/components/Button";
 import Input from "@/app/components/Input";
-import GoogleIcon from "@/helpers/googleIcon";
 import { routes } from "@/routes";
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
   CalendarCheckIcon,
-  LockIcon,
   MailIcon,
-  UserIcon,
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const SignUp = () => {
+const ForgotPassword = () => {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
@@ -23,7 +21,7 @@ const SignUp = () => {
     <div className="min-h-screen w-full flex">
       <div className="flex-1 flex flex-col bg-white">
         {/* Mobile Header */}
-        <div className="lg:hidden flex items-center justify-between px-5 py-4 border-b border-gray-100 ">
+        <div className="lg:hidden flex items-center justify-between px-5 py-4 border-b border-gray-100">
           <Button
             onClick={() => router.back()}
             className="p-1.5 rounded-lg hover:bg-gray-100 text-gray-400 transition-colors"
@@ -38,10 +36,11 @@ const SignUp = () => {
 
             <span className="text-sm font-bold text-gray-900">Habiitz</span>
           </div>
+
           <div className="w-8" />
         </div>
-        {/* Desktop back button */}
 
+        {/* Desktop Back Button */}
         <div className="hidden lg:block px-8 pt-8">
           <Button
             onClick={() => router.back()}
@@ -57,52 +56,25 @@ const SignUp = () => {
           <div className="w-full max-w-sm">
             <div className="mb-8">
               <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight mb-1.5">
-                Create your account
+                Forgot your password?
               </h1>
+
               <p className="text-sm text-gray-400">
-                Start building better habits in minutes
+                Enter your email and we&apos;ll send you a link to reset your
+                password.
               </p>
             </div>
 
             <form className="space-y-4">
-              <Input
-                type="text"
-                placeholder="Hailey Johnson"
-                label="Full Name"
-                className="w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow border-gray-200 bg-gray-50/50"
-                icon={UserIcon}
-                id="signup-name"
-              />
               <Input
                 type="email"
                 placeholder="you@email.com"
                 label="Email"
                 className="w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow border-gray-200 bg-gray-50/50"
                 icon={MailIcon}
-                id="signup-email"
+                id="forgot-password-email"
               />
-              <Input
-                type="password"
-                placeholder="Password"
-                label="PASSWORD"
-                className="w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow border-gray-200 bg-gray-50/50"
-                icon={LockIcon}
-                id="signup-password"
-                showPasswordToggle
-              />
-              {/* Terms */}
-              <p className="text-[11px] text-gray-400 leading-relaxed">
-                By creating an account, you agree to our{" "}
-                <Link href="#" className="text-blue-500 hover:underline">
-                  Terms of Service
-                </Link>{" "}
-                and{" "}
-                <Link href="#" className="text-blue-500 hover:underline">
-                  Privacy Policy
-                </Link>
-              </p>
 
-              {/* Submit */}
               <Button
                 type="submit"
                 className="w-full py-3 px-4 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-xl transition-colors"
@@ -111,34 +83,18 @@ const SignUp = () => {
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 ) : (
                   <>
-                    Create Account
+                    Send Reset Link
                     <ArrowRightIcon className="w-4 h-4" />
                   </>
                 )}
               </Button>
             </form>
 
-            {/* Divider */}
-
-            <div className="flex items-center gap-3 my-6">
-              <div className="flex-1 h-px bg-gray-100" />
-              <span className="text-xs text-gray-300">or</span>
-              <div className="flex-1 h-px bg-gray-100" />
-            </div>
-
-            {/* Social Signup */}
-
-            <Button className="flex items-center justify-content-center gap-2.5 w-full py-3 border border-gray-300 hover:bg-gray-50 text-gray-600 font-medium rounded-xl transition-colors">
-              <GoogleIcon />
-              Continue with Google
-            </Button>
-
-            {/* Login link */}
             <p className="text-center text-sm text-gray-400 mt-6">
-              Already have an account?{" "}
+              Remember your password?{" "}
               <Link
-                className="text-blue-500 hover:text-blue-600 font-semibold transition-colors"
                 href={routes.SIGNIN}
+                className="text-blue-500 hover:text-blue-600 font-semibold transition-colors"
               >
                 Sign in
               </Link>
@@ -150,4 +106,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default ForgotPassword;
