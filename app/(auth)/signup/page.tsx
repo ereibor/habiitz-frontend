@@ -1,6 +1,8 @@
 "use client";
 import Button from "@/app/components/Button";
 import Input from "@/app/components/Input";
+import GoogleIcon from "@/helpers/googleIcon";
+import { routes } from "@/routes";
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
@@ -115,6 +117,32 @@ const SignUp = () => {
                 )}
               </Button>
             </form>
+
+            {/* Divider */}
+
+            <div className="flex items-center gap-3 my-6">
+              <div className="flex-1 h-px bg-gray-100" />
+              <span className="text-xs text-gray-300">or</span>
+              <div className="flex-1 h-px bg-gray-100" />
+            </div>
+
+            {/* Social Signup */}
+
+            <Button className="flex items-center justify-content-center gap-2.5 w-full py-3 border border-gray-300 hover:bg-gray-50 text-gray-600 font-medium rounded-xl transition-colors">
+              {GoogleIcon()}
+              Continue with Google
+            </Button>
+
+            {/* Login link */}
+            <p className="text-center text-sm text-gray-400 mt-6">
+              Already have an account?{" "}
+              <Link
+                className="text-blue-500 hover:text-blue-600 font-semibold transition-colors"
+                href={routes.SIGNIN}
+              >
+                Sign in
+              </Link>
+            </p>
           </div>
         </div>
       </div>
