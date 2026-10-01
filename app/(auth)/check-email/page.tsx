@@ -4,13 +4,10 @@ import Button from "@/app/components/Button";
 import { routes } from "@/routes";
 import { ArrowLeftIcon, CalendarCheckIcon, MailCheckIcon } from "lucide-react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const CheckEmail = () => {
   const router = useRouter();
-  const searchParams = useSearchParams();
-
-  const email = searchParams.get("email") || "your email address";
 
   return (
     <div className="min-h-screen w-full flex">
@@ -59,8 +56,12 @@ const CheckEmail = () => {
 
             <p className="text-sm text-gray-400 leading-relaxed">
               We sent a password reset link to{" "}
-              <span className="font-medium text-gray-600">{email}</span>. Check
-              your inbox and follow the instructions to reset your password.
+              <span className="font-medium text-gray-600">
+                {" "}
+                your email address
+              </span>
+              . Check your inbox and follow the instructions to reset your
+              password.
             </p>
 
             <Button
